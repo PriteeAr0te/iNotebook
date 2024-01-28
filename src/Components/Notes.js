@@ -10,9 +10,9 @@ const Notes = (props) => {
     const {notes, getNotes, editNote} = context;
     useEffect(()=>{
         if(localStorage.getItem('token')){
-            getNotes()
+            getNotes();
         }else {
-            navigate("/login")
+            navigate("/login");
         }
     },[])
     

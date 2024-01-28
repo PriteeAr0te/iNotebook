@@ -38,23 +38,19 @@ const Login = (props) => {
     }
 
   return (
-    <div className="container mt-3">
-    <div className="row justify-content-center">
-      <div className="col-md-6">
-        <h2>Login To Continue iNotebook</h2>
-        <form onSubmit ={handleSubmit}>
-          <div className="form-group">
-            <label htmlFor="email">Email address</label>
-            <input type="email" className="form-control" onChange = {onChange} value = {credentials.email} name = "email" id="email" placeholder="Enter email" required/>
+    <div className="container-fluid">
+        <form className = "form-login mx-auto" onSubmit ={handleSubmit}>
+        <h2 className='form-title text-center'>Login To Continue iNotebook</h2>
+          <div className="mb-3 mt-4">
+            <label className="form-label" htmlFor="email">Email address</label>
+            <input type="email" className="form-control mt-2" onChange = {onChange} value = {credentials.email} name = "email" id="email" placeholder="Enter email" required/>
           </div>
-          <div className="form-group">
-            <label htmlFor="password">Password</label>
-            <input type="password" className="form-control" onChange = {onChange} value = {credentials.password} name = "password" id="password" placeholder="Enter password" required/>
+          <div className="mb-3">
+            <label className="form-label mt-2" htmlFor="password">Password</label>
+            <input type="password" className="form-control mt-2" onChange = {onChange} value = {credentials.password} name = "password" id="password" placeholder="Enter password" required/>
           </div>
-          <button type="submit" className="btn btn-primary my-3">Login</button>
+          <button type="submit" className="btn login-button my-3 mt-4">Login</button>
         </form>
-      </div>
-    </div>
   </div>
   )
 }
