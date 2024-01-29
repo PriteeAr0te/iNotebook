@@ -9,7 +9,6 @@ import {
 import NoteState from './Context/notes/NoteState';
 import Navbar from './Components/Navbar';
 import Home from './Components/Home';
-import About from './Components/About';
 import Alert from './Components/Alert';
 import Login from './Components/Login';
 import Signup from './Components/Signup';
@@ -36,7 +35,6 @@ function App() {
       <div className="container my-3">
       <Routes>
         <Route path="/" element={<Home showAlert = {showAlert}/>} />
-        <Route path="/about" element={<About/>} />
         <Route path="/login" element={<Login showAlert = {showAlert}/>} />
         <Route path="/signup" element={<Signup showAlert = {showAlert}/>} />
       </Routes>

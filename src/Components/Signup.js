@@ -58,19 +58,15 @@ const Signup = (props) => {
   };
 
   return (
-    <div className="container mt-3">
-    <div className="row justify-content-center">
-      <div className="col-md-6">
-        <h2>Create an account to use iNotebook</h2>
-        <form onSubmit={handleOnSubmit}>
-          <div className="row">
-            <div className="col">
+    <div className="container-fluid">
+        <form className = "form mx-auto" onSubmit={handleOnSubmit}>
+        <h2 className='form-title text-center'>Create an account to use iNotebook</h2>
+            <div className="mb-3 mt-4">
               <input type="text" name="fname" onChange={onChange} id="fname" className="my-3 form-control" placeholder="First name" aria-label="First name" required />
             </div>
-            <div className="col">
+            <div className="mb-3">
               <input type="text" name="lname" onChange={onChange} id="lname" className="my-3 form-control" placeholder="Last name" aria-label="Last name" />
             </div>
-          </div>
           <div className="mb-3">
             <input type="email" name="email" className="form-control" onChange={onChange} id="email" placeholder="Enter Your Email" required />
           </div>
@@ -89,11 +85,9 @@ const Signup = (props) => {
             </div>
           </div>
           <div className="col-12">
-            <button type="submit" className="btn btn-primary my-3">Sign in</button>
+            <button type="submit" className="btn button my-3">Sign in</button>
           </div>
         </form>
-      </div>
-    </div>
   </div>
   );
 };

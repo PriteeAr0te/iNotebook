@@ -4,15 +4,16 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	color: rgba(0,0,0,.87)
 }
 body {
 	background: linear-gradient(90deg, rgba(2,0,36,1)0%, rgba(75,14,154,1) 35%, rgba(0,212, 255,1) 100%);
 	/* background: linear-gradient(to right,#cc2b5e,#753a88); */
 	font-family: 'Poppins', sans-serif;
 }
-.form-login {
+.form {
 	background-color: aliceblue;
-	padding: 50px;
+	padding: 40px;
 	border-radius: 20px;
 	width: 35%;
 
@@ -20,20 +21,38 @@ body {
 		width: 100%;
 	  }
 	}
+.add-note-form {
+	background-color: aliceblue;
+	padding: 35px;
+	border-radius: 20px;
+	width:60%;
+}
 
-.login-button {
+.nav-button {
+	background: linear-gradient(90deg, rgba(2,0,36,1)0%, rgba(75,14,154,1) 35%, rgba(0,212, 255,1) 100%);
+	border: none;
+	border-radius: 50px;
+	color: aliceblue;
+}
+
+.form-check-input {
+	border: 1px solid;
+}
+
+.button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: 80%;
-	margin: 10%;
+	margin: 8%;
 	background: linear-gradient(90deg, rgba(2,0,36,1)0%, rgba(75,14,154,1) 35%, rgba(0,212, 255,1) 100%);
 	border: none;
 	border-radius: 50px;
 	color: aliceblue;
 }
 .form-control {
-	color: rgba(0,0,0,.87);
+	/* color: rgba(0,0,0,.87); */
+	color: black;
 	border: none;
 	border-bottom-color: rgba(0,0,0,.42);
 	box-shadow: none !important;

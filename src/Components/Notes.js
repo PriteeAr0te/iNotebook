@@ -48,36 +48,36 @@ const Notes = (props) => {
         <div className="modal-dialog">
             <div className="modal-content">
             <div className="modal-header">
-                <h1 className="modal-title fs-5" id="exampleModalLabel">Edit Note</h1>
+                <h1 className="form-title text-center" id="exampleModalLabel">Edit Note</h1>
                 <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body">
         
             <form>
                 <div className="form-group">
-                    <label htmlFor="title">Title</label>
+                    <label className="fw-semibold mt-3"  htmlFor="title">Title</label>
                     <input type="text" className="form-control my-2" id="etitle" value ={note.etitle} name = "etitle" aria-describedby="emailHelp" onChange = {onChange} minLength = {5} required/>
                 </div>
                 <div className="form-group my-3">
-                    <label htmlFor="description">Description</label>
-                    <input type="text" className="form-control my-2" id="edescription" value ={note.edescription} name = "edescription" onChange = {onChange} minLength = {5} required/>
+                    <label className="fw-semibold mt-3" htmlFor="description">Description</label>
+                    <textarea type="text" className="form-control my-2" id="edescription" value ={note.edescription} name = "edescription" onChange = {onChange} minLength = {5} required/>
                 </div>
                 <div className="form-group my-3">
-                    <label htmlFor="tag">Tag</label>
+                    <label className="fw-semibold mt-3" htmlFor="tag">Tag</label>
                     <input type="text" className="form-control my-2" id="etag" value ={note.etag} name = "etag" onChange = {onChange} minLength = {4} required/>
                 </div>
             </form>
         </div>
             <div className="modal-footer">
-                <button ref = {refClose} type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button disabled ={note.etitle.length<5 || note.edescription.length < 5} type="button" onClick ={handleOnClick} className="btn btn-primary">Update Note</button>
+                {/* <button ref = {refClose} type="button" className="btn button" data-bs-dismiss="modal">Close</button> */}
+                <button disabled ={note.etitle.length<5 || note.edescription.length < 5} type="button" onClick ={handleOnClick} className="btn button">Update Note</button>
             </div>
             </div>
             </div>
         </div>
         
-        <div className="row my-3">
-                <h1> Your Notes </h1>
+        <div className="row my-3 mt-5">
+                <h1 className='text-center form-title mt-5'> Your Notes </h1>
                 <div className="container mx-2">
                 {/* {notes.length === 0 && "No Notes to display"} */}
                 {Array.isArray(notes) && notes.length === 0 && "No Notes to display"}
