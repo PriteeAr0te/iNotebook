@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Login = (props) => {
+  const BASE_URL = "https://inotebook-backend18052.onrender.com";
   const [credentials, setCredentials] = useState({ email: "", password: "" });
 
   // replacing useHistory hook in v5 with useNavigate
@@ -9,19 +10,16 @@ const Login = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(
-        `https://inotebook-backend-sljt.onrender.com/api/auth/login`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            email: credentials.email,
-            password: credentials.password,
-          }),
-        }
-      );
+      const response = await fetch(`${BASE_URL}/api/auth/login`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: credentials.email,
+          password: credentials.password,
+        }),
+      });
       const json = await response.json();
       // console.log(json)
       if (json.success) {

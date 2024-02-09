@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Signup = (props) => {
+  const BASE_URL = "https://inotebook-backend18052.onrender.com";
   const [credentials, setCredentials] = useState({
     fname: "",
     lname: "",
@@ -24,21 +25,18 @@ const Signup = (props) => {
 
     try {
       // Sending signup request
-      const response = await fetch(
-        `https://inotebook-backend-sljt.onrender.com/api/auth/createuser`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            name: `${fname} ${lname}`,
-            email,
-            password,
-            confirmPassword,
-          }),
-        }
-      );
+      const response = await fetch(`${BASE_URL}/api/auth/createuser`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: `${fname} ${lname}`,
+          email,
+          password,
+          confirmPassword,
+        }),
+      });
 
       const json = await response.json();
       // console.log(json);
