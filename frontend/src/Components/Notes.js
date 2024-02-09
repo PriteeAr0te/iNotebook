@@ -76,9 +76,9 @@ const Notes = (props) => {
             </div>
         </div>
         
-        <div className="row my-3 mt-5">
+        <div className="row my-3 mt-5"  style={{color: "white"}}>
                 <h1 className='text-center form-title mt-5'> Your Notes </h1>
-                <div className="container mx-2">
+                <div className="container mx-2"  style={{color:"white"}}>
                 {/* {notes.length === 0 && "No Notes to display"} */}
                 {Array.isArray(notes) && notes.length === 0 && "No Notes to display"}
 
@@ -89,7 +89,7 @@ const Notes = (props) => {
                     return <NoteItem key ={note._id} updateNote = {updateNote} note = {note} showAlert = {props.showAlert}/>
                 })
             ):(
-                <p>No Notes to display</p>
+                <p  style={{color:"white"}}>No Notes to display</p>
             )}
         </div>
     </>
